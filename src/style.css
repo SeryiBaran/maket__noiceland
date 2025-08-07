@@ -1,0 +1,390 @@
+body {
+  font-family: 'Libre Franklin Variable', system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, outline-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.container {
+  padding: 30px;
+  max-width: 1260px; /* +60px because 30px paddings */
+  margin: 0 auto;
+}
+
+.divider {
+  margin: 90px 0;
+  border-top: #e6e6e6 solid 1px;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  border: none;
+  font-family: inherit;
+  background-color: transparent;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header.header {
+  border-bottom: #e6e6e6 solid 1px;
+}
+
+header.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navList {
+  list-style: none;
+  display: inline-flex;
+  margin: 0;
+  gap: 0 40px;
+}
+
+.navLink {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@media (max-width: 768px) {
+  .headerNav {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translateX(-100%);
+    background-color: #e0ebe7;
+    overflow: auto;
+  }
+  .headerNav.activeNav {
+    transform: translateX(0);
+  }
+  .navList {
+    display: flex;
+    flex-direction: column;
+  }
+  .navLink {
+    display: block;
+    padding: 16px 32px;
+  }
+}
+
+.burgerBtn {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: square;
+  font-size: 40px;
+}
+
+@media (min-width: 768px) {
+  .burgerBtn {
+    width: 0;
+    height: 0;
+    appearance: none;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    top: -999vh;
+    left: -999vw;
+  }
+}
+
+main > .container {
+  padding-bottom: 90px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+.heading {
+  color: #999;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.posts_container {
+  display: grid;
+  gap: 20px;
+  row-gap: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+}
+
+.postImage_wrapper {
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.post_image {
+  max-width: 100%;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a.post:hover {
+  text-decoration: none;
+}
+
+a.post:hover .post_title {
+  text-decoration: underline;
+}
+
+.post:hover .post_image {
+  transform: scale(1.1);
+}
+
+.post_tag {
+  color: #999;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.post_title {
+  font-family: 'Tenor Sans';
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.post_author {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.post.first_post {
+  /* magic from https://stackoverflow.com/a/50612664/17486232 */
+  grid-column: 1/-1;
+
+  display: flex;
+  gap: 50px;
+
+  margin-bottom: 10px;
+}
+
+@media (max-width: 780px) {
+  .post.first_post {
+    flex-direction: column;
+  }
+}
+
+.post.first_post .post_image {
+  object-fit: cover;
+  height: 100%;
+  margin-bottom: 0;
+}
+
+.post.first_post .post_content {
+  margin-top: 6px;
+  max-width: 430px;
+  width: 100%;
+}
+
+.post.first_post .post_title {
+  font-size: 36px;
+}
+
+@media (max-width: 480px) {
+  .post.first_post .post_title {
+    font-size: 28px;
+  }
+}
+
+.post.first_post .post_description {
+  color: #666;
+  font-family: 'Source Serif Pro';
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.latest_posts .posts_container {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+@media (max-width: 320px) {
+  .latest_posts .posts_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.latest_posts_button_wrapper {
+  text-align: center;
+}
+
+.latest_posts_button {
+  display: inline-block;
+  padding: 21px 26px;
+  margin-top: 90px;
+
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+.latest_posts_button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.featured_posts .posts_container {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) {
+  .featured_posts .posts_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+footer {
+  background: #141414;
+  color: #fff;
+}
+
+footer .container {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+footer .divider {
+  border-color: #4d4d4d;
+  margin: 62px 0;
+}
+
+footer .logo {
+  margin-right: 15px;
+}
+
+footer .footer_copyright {
+  color: #666;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+footer .heading {
+  color: #666;
+}
+
+.footer_content2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px 0;
+}
+
+@media (max-width: 1280px) {
+  .footer_content2 {
+    flex-direction: column-reverse;
+  }
+}
+
+.footer_links {
+  --columns: 4;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: 64px;
+}
+
+.footer_link {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.footerLinksList {
+  list-style-type: none;
+  display: grid;
+  gap: 15px;
+}
+
+.footer_links_group_categories {
+  grid-column: 1 / -1;
+}
+
+.footer_links_group_categories .footerLinksList {
+  grid-template-columns: repeat(var(--columns), 1fr);
+}
+
+@media (max-width: 960px) {
+  .footer_links {
+    --columns: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer_links {
+    --columns: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer_links {
+    --columns: 1;
+  }
+}
+
+.footer_form {
+  max-width: 300px;
+  width: 100%;
+}
+
+.footerFormControls {
+  display: flex;
+}
+
+.footerFormControls_emailInput,
+.footerFormControls_submitBtn {
+  letter-spacing: 1px;
+  padding: 18px 24px;
+}
+
+.footerFormControls_emailInput {
+  font-size: 10px;
+  line-height: 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 100%;
+}
+
+.footerFormControls_submitBtn {
+  background-color: #000;
+}

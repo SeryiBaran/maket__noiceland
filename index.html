@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="container">
+          <img class="logo" src="/black_logo.svg" alt="Logo" />
+          <nav class="headerNav" id="headerNav">
+            <ul class="navList">
+              <li class="navLi"><a href="#!" class="navLink">Home</a></li>
+              <li class="navLi"><a href="#!" class="navLink">Latest</a></li>
+              <li class="navLi"><a href="#!" class="navLink">About</a></li>
+            </ul>
+          </nav>
+          <button class="burgerBtn" id="burgerBtn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE -->
+              <path
+                fill="currentColor"
+                d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"
+              />
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <section class="posts">
+            <div class="posts_container"></div>
+          </section>
+          <div class="divider"></div>
+          <section class="latest_posts">
+            <h2 class="heading">LATEST POSTS</h2>
+            <div class="posts_container latest_posts_container"></div>
+            <div class="latest_posts_button_wrapper">
+              <a href="#!" class="latest_posts_button transition-colors">
+                view all latest posts
+              </a>
+            </div>
+          </section>
+          <div class="divider"></div>
+          <section class="featured_posts">
+            <h2 class="heading">featured posts</h2>
+            <div class="posts_container featured_posts_container"></div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <p>
+            <img class="logo" src="/white_logo.svg" alt="Logo" />
+            <span class="footer_copyright">
+              © 2018 Noiceland™, all rights reserved
+            </span>
+          </p>
+          <div class="divider"></div>
+          <div class="footer_content2">
+            <div class="footer_links">
+              <div class="footer_links_group footer_links_group_categories">
+                <p class="heading">Categories</p>
+                <ul class="footerLinksList">
+                  <li><a href="#!" class="footer_link">Animation</a></li>
+                  <li><a href="#!" class="footer_link">Architecture</a></li>
+                  <li><a href="#!" class="footer_link">Graphic Design</a></li>
+                  <li><a href="#!" class="footer_link">Illustration</a></li>
+                  <li>
+                    <a href="#!" class="footer_link">Interactive Design</a>
+                  </li>
+                  <li><a href="#!" class="footer_link">Miscellaneous</a></li>
+                  <li><a href="#!" class="footer_link">Photography</a></li>
+                  <li><a href="#!" class="footer_link">Product Design</a></li>
+                </ul>
+              </div>
+              <div class="footer_links_group footer_links_group_information">
+                <p class="heading">Information</p>
+                <ul class="footerLinksList">
+                  <li><a href="#!" class="footer_link">about</a></li>
+                  <li><a href="#!" class="footer_link">contact</a></li>
+                  <li><a href="#!" class="footer_link">terms</a></li>
+                </ul>
+              </div>
+              <div class="footer_links_group footer_links_group_followUs">
+                <p class="heading">follow us</p>
+                <ul class="footerLinksList">
+                  <li><a href="#!" class="footer_link">instagram</a></li>
+                  <li><a href="#!" class="footer_link">facebook</a></li>
+                  <li><a href="#!" class="footer_link">twitter</a></li>
+                </ul>
+              </div>
+              <div class="footer_links_group footer_links_group_template">
+                <p class="heading">Template</p>
+                <ul class="footerLinksList">
+                  <li>
+                    <a href="#!" class="footer_link">Image License Info</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="footer_link">Powered by Webflow</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <form class="footer_form">
+              <p class="heading">Subscribe to newsletter</p>
+              <div class="footerFormControls">
+                <input
+                  class="footerFormControls_emailInput"
+                  type="text"
+                  placeholder="EMAIL ADDRESS"
+                />
+                <button class="footerFormControls_submitBtn" type="submit">
+                  SEND
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

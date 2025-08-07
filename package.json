@@ -1,0 +1,24 @@
+{
+  "name": "maket__noiceland",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.6.3",
+    "eslint": "^8.56.0",
+    "eslint-plugin-format": "^0.1.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "@fontsource-variable/libre-franklin": "^5.0.17",
+    "@fontsource/source-serif-pro": "^5.0.8",
+    "@fontsource/tenor-sans": "^5.0.18",
+    "gardevoir": "^1.0.0"
+  }
+}
