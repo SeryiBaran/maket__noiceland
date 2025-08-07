@@ -158,7 +158,7 @@ function createPosts() {
     .map((post, postIndex) => {
       return `<a href="#!" class="post${postIndex === 0 ? ' first_post' : ''}">
   <div class="postImage_wrapper">
-    <img class="post_image" src="${post.image}" />
+    <img class="post_image" src="${import.meta.env.BASE_URL + '/' + post.image}" />
   </div>
   <div class="post_content">
     <p class="post_tag">${post.tag}</p>
@@ -190,7 +190,7 @@ function createLatestPosts() {
     .map((post) => {
       return `<a href="#!" class="post latest_post">
   <div class="postImage_wrapper">
-    <img class="post_image" src="${post.image}" />
+    <img class="post_image" src="${import.meta.env.BASE_URL + '/' + post.image}" />
   </div>
   <div class="post_content">
     <p class="post_tag">${post.tag}</p>
@@ -215,7 +215,7 @@ function createFeaturedPosts() {
     .map((post) => {
       return `<a href="#!" class="post featured_post">
   <div class="postImage_wrapper">
-    <img class="post_image" src="${post.image}" />
+    <img class="post_image" src="${import.meta.env.BASE_URL + '/' + post.image}" />
   </div>
   <div class="post_content">
     <p class="post_tag">${post.tag}</p>
